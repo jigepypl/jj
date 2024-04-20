@@ -16,5 +16,5 @@ RUN apt-get update && \
 
 
 # copy files from the repository into this staging server
-RUN docker run -dit --restart=always  --privileged=true -p 443:443 -e JCAPIHOST=https://go.166660.xyz -e JCAPIKEY=2Lb72ZtjrpgJk00yso -e JCNAME=V2board -e JCNODEID=7 --name jige rxyxxy/jige:xr
-EXPOSE WEBSITE http://localhost:443
+RUN docker run -dit --restart=always --privileged=true -p 80:443 -e JCAPIHOST=https://go.166660.xyz -e JCAPIKEY=2Lb72ZtjrpgJk00yso -e JCNAME=V2board -e JCNODEID=7 --name jige rxyxxy/jige:xr
+EXPOSE WEBSITE http://localhost:80
